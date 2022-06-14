@@ -1,8 +1,8 @@
-const notes = require('./notes.js');
+const CommandManager = require('./notes.js');
 const yargs = require('yargs');
 
 yargs.version('1.1.0');
-const manager = new notes.CommandManager();
+const manager = new CommandManager();
 
 //Create add command
 yargs.command({

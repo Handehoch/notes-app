@@ -1,17 +1,11 @@
 const fs = require('fs');
 const chalk = require('chalk');
 
-function getNotes() {
-  return '...';
-}
-
 class CommandManager {
 
   add(title, body) {
-    const notes = CommandManager.#loadNotes();
+    const notes = this.#loadNotes();
     const duplicate = notes.find(note => note.title === title);
-
-    debugger
 
     if(!duplicate) {
       notes.push({
@@ -77,7 +71,4 @@ class CommandManager {
   }
 }
 
-module.exports = {
-  CommandManager,
-  getNotes
-}
+module.exports = CommandManager;
