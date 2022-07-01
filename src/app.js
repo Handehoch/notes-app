@@ -23,7 +23,7 @@ yargs.command({
   handler(argv) {
     manager.add(argv.title, argv.body)
   },
-})
+});
 
 //Create remove command
 yargs.command({
@@ -39,7 +39,7 @@ yargs.command({
   handler(argv) {
     manager.remove(argv.title);
   },
-})
+});
 
 //Create list command
 yargs.command({
@@ -48,7 +48,7 @@ yargs.command({
   handler() {
     manager.list();
   },
-})
+});
 
 //Create read command
 yargs.command({
@@ -64,7 +64,7 @@ yargs.command({
   handler(argv) {
     manager.read(argv.title);
   },
-})
+});
 
 yargs.parse();
 // console.log(yargs.argv);
